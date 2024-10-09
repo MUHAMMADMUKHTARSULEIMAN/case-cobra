@@ -15,7 +15,7 @@ const Phone = ({className, imgSrc, dark = false, ...props}: PhoneProps) => {
       alt="Phone Image"
       />
       <div className="absolute -z-10 inset-0 ">
-        <img className="object-cover" src={imgSrc} alt="User's Image"/>
+        <img className="object-cover" src={imgSrc} alt="User's image"/>
       </div>
     </div>
   )
