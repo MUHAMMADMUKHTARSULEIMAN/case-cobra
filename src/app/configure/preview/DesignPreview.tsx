@@ -7,7 +7,7 @@ import { cn, formatPrice } from '@/lib/utils'
 import { COLORS, FINISHES, MODELS } from '@/validators/option-validator'
 import { Configuration } from '@prisma/client'
 import { useMutation } from '@tanstack/react-query'
-import { ArrowRight, Check } from 'lucide-react'
+import { Check, MoveRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Confetti from 'react-dom-confetti'
 import { createCheckoutSession } from './actions'
@@ -160,7 +160,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
               <Button
                 onClick={() => handleCheckout()}
                 className='px-4 sm:px-6 lg:px-8'>
-                Check out <ArrowRight className='h-4 w-4 ml-1.5 inline' />
+                Check out <MoveRight className='h-4 w-4 ml-1.5 inline' />
               </Button>
             </div>
           </div>
