@@ -5,6 +5,23 @@ import { db } from '@/db'
 import { stripe } from '@/lib/stripe'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { Order } from '@prisma/client'
+import { cookies } from 'next/headers'
+
+export const userFunction = async () => {
+  const { getUser } = getKindeServerSession()
+  const user = getUser()
+
+  if(user !== null) {
+    cookies().set("user-store", "true", { secure: true })
+  }
+
+  const userStore = cookies().get("user-store")
+
+  if(user !== null) {
+    return userStore
+  }
+} 
+
 
 export const createCheckoutSession = async ({
   configId,

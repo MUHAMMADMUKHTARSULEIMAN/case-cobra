@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import { buttonVariants } from './ui/button'
+import { buttonVariants } from './ui/button';
 import { MoveRight } from 'lucide-react'
 import { getKindeServerSession, LoginLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/server'
 
